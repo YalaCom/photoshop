@@ -1,0 +1,20 @@
+{
+  "name": "PIXELFORGE — Creative Photo Studio",
+  "short_name": "PIXELFORGE",
+  "description": "Мобильный фоторедактор: игровые стили, обработка, кисти, текст и экспорт.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0b0c10",
+  "theme_color": "#0b0c10",
+  "orientation": "any",
+  "lang": "ru",
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
