@@ -1,10 +1,13 @@
 # PIXELFORGE — Creative Photo Studio
 
-Мобильный фоторедактор на чистом HTML/CSS/JavaScript. Работает в браузере телефона без регистрации и платных API.
+Два режима мобильного фоторедактора: PRO — встроенный Photopea (требуется интернет, интерфейс и движок стороннего сервиса), и STUDIO — независимый редактор на чистом HTML/CSS/JavaScript с игровыми фильтрами, работающий локально.
 
 ## Открыть сайт
 
-После включения GitHub Pages: https://yalacom.github.io/photoshop/
+После включения GitHub Pages:
+
+- **PRO / Photopea (полноценные слои, PSD, маски):** https://yalacom.github.io/photoshop/
+- **STUDIO / быстрый редактор с игровыми фильтрами:** https://yalacom.github.io/photoshop/studio.html
 
 Для публикации: Settings → Pages → Build and deployment → Source → **GitHub Actions**. Затем Actions → **Publish PIXELFORGE to GitHub Pages** → Run workflow, если не запустился автоматически.
 
@@ -27,10 +30,11 @@
 
 Интерфейс разработан на основе мобильных принципов [UI/UX Pro Max](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill): адаптивность, крупные зоны касания, ясная иерархия и доступность.
 
-- index.html — интерфейс и стили.
+- index.html — оболочка PRO с официально поддерживаемым iframe Photopea.
+- studio.html — независимый мобильный интерфейс STUDIO.
 - app.js — редактор Canvas.
 - icon.svg и manifest.webmanifest — иконка и установка на экран.
 - sw.js — офлайн-кэш.
 - .github/workflows/pages.yml — публикация через GitHub Actions.
 
-Без npm и внешних JavaScript-библиотек, чтобы не зависеть от CDN. Проект можно расширять WebGL, AI-моделями и слоями.
+STUDIO не требует npm, CDN и внешних JavaScript-библиотек. PRO загружает Photopea с photopea.com; его доступность и условия определяются сервисом. Список инструментов выше относится к STUDIO.
